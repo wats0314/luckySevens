@@ -1,4 +1,5 @@
 	table {
+	table-layout: fixed;
 	font-size: 1.4em;
 	font-weight: bold;
 	color: black;
@@ -7,23 +8,35 @@
 	border: black solid 3px;
 	margin-bottom: 100px;
 	margin-top: 40px;
-	width: 30%;
+	width: 50%;
 	height: 40%;
 	text-align: center;
 	padding-bottom: 100px;
 	}
     
+	h1 {
+	font-size: 4em;
+	font-weight:bold;
+	font-style: italic;
+	}
+	
+	h2 {
+	padding: 15px;
+	}
+	
     td, th {
         padding: 25px;
     }
     
     thead {
         background-color: lightgrey;
-        color: red;
+        color: Black;
         border: black solid 3px;
     }
     
 	tbody, tr, td, th {
+		text-align: center;
+		table-layout: fixed;
 		border: black solid 3px;
 	}
 	
@@ -32,19 +45,45 @@
 		}
 		
     tbody tr:nth-child(even) {
-		background-color: lightgreen;
+		background-color: #0099ff;
 		}
 	
-	h2 {
-	margin-bottom: -20px
+	
+	#bg {
+	line-height:25px;
+	color: white;
+	text-align: center;
+	border: black solid 3px;
+	padding: 0;
+	height: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+	background-image: url("../image/gamble.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
 	}
 	
-	#menu{
-	padding-left: 20px;
-	padding-right: 20px;
-	}
-	body {
-	height: 150%;
+	#betAmount {
+	padding: 10px;
+	margin: 15px;
+	font-size: 1.5em;
+	font-weight: bold;
+	background-color: lightgrey;
 	text-align: center;
+	margin: auto;
+	width: 100px;
+	height: 60px;
 	}
+	
+	#p2 {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 20px;
+	font-size: 1.5em;
+	color: Black;
+	font-weight: bold;
+	
+	}
+	
+	
 	

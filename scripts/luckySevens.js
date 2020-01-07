@@ -32,8 +32,8 @@ for (i = 0; i < moneyLog.length; i++){
 	
 
 }
-document.getElementById("highMoney").innerHTML = getMax();
-document.getElementById("initialBet").innerHTML = startingBet;
+document.getElementById("highMoney").innerHTML = "$" +  getMax();
+document.getElementById("initialBet").innerHTML = "$" + startingBet;
 document.getElementById("totalRolls").innerHTML = rollCount;
 document.getElementById("rollatHighest").innerHTML = highRollIndex;
 		
