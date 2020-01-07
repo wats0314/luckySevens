@@ -5,10 +5,10 @@
 <head>
 <title>Lucky Sevens</title>
 
-<script src="scripts/luckySevens.js"></script>
-
-
 <link rel="stylesheet" type="text/css" href="styles/luckySevens.css"/>
+
+
+
 
 
 </head>
@@ -18,22 +18,41 @@
 
 
 
-
-
-
 <h1>lucky sevens</h1>
 
-<p id="moneyinput">money input = </p>
+<p id="moneyInput">money input = </p>
 
 
-<form  id="moneyform">
-	<label for="input1">Place your bet</label>
-	<input type="number" id="betamount" value="0"/>
-	
-	<button onclick="playGame()" id="p2" class="playButton" type="button">Play</button>
+	<form  id="moneyform">
+		<label for="input1">Place your bet</label>
+		<input type="number" id="betAmount" value="0"/>
+		<button onclick="playGame()" id="p2" class="playButton" type="button">Play</button>
+	</form>
 
-
-</form>
+	<table border="1" style="border-collapse: collapse"><caption id="tableCaption">Your initial bet = </caption>
+		<thead>
+			<tr>
+				<th>Starting Bet</th>
+				<th id="initialBet"> </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Total Rolls Before Going Broke</td>
+				<td id="totalRolls"> </td>
+			</tr>
+			<tr>	
+				<td>Highest Amount Won</td>
+				<td id="highMoney"></td>
+			</tr>
+			<tr>
+				<td>Roll Count at Highest Amount Won</td>
+				<td id="rollatHighest"> </td>
+			</tr>
+		</tbody>
+	</table>
+				
+<script src="scripts/luckySevens.js"></script>
 
 </body>
 
