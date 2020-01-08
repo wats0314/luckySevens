@@ -6,8 +6,8 @@
     border-collapse: collapse;
 	margin: auto;
 	border: black solid 3px;
-	margin-bottom: 100px;
-	margin-top: 40px;
+	margin-bottom: 15px;
+	margin-top: 20px;
 	width: 50%;
 	height: 40%;
 	text-align: center;
@@ -15,13 +15,18 @@
 	}
     
 	h1 {
-	font-size: 4em;
+	margin-top:40px;
+	margin-bottom: 20px;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	font-size: 4.5em;
 	font-weight:bold;
 	font-style: italic;
 	}
 	
 	h2 {
-	padding: 15px;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	padding-bottom: 20px;
+	font-style: italic;
 	}
 	
     td, th {
@@ -48,6 +53,8 @@
 		background-color: #0099ff;
 		}
 	
+
+	
 	
 	#bg {
 	line-height:25px;
@@ -56,7 +63,8 @@
 	border: black solid 3px;
 	padding: 0;
 	height: 100%;
-	max-width: 900px;
+	min-height: 1100px;
+	max-width: 1000px;
 	margin: 0 auto;
 	background-image: url("../image/gamble.jpg");
 	background-size: cover;
@@ -64,6 +72,7 @@
 	}
 	
 	#betAmount {
+	color: black;
 	padding: 10px;
 	margin: 15px;
 	font-size: 1.5em;
@@ -77,12 +86,20 @@
 	
 	#p2 {
 	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 	padding: 20px;
 	font-size: 1.5em;
-	color: Black;
+	color: White;
 	font-weight: bold;
+	}
 	
+	#playAgain {
+	margin: auto;
+	margin-bottom: 40px;
+	padding: 20px;
+	font-size: 1.5em;
+	color: White;
+	font-weight: bold;
 	}
 	
 	
