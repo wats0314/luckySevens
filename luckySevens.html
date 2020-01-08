@@ -16,46 +16,60 @@
 
 <body>
 
-<div id="bg" class="container-fluid">
-
-
-<header>
-<h1>"Lucky Sevens!"</h1>
-</header>
-<p><h2>Enter a Starting Bet:</h2></p>
-
-
-	<form  id="moneyform">
-		<input type="number" class="form-control" id="betAmount" value="0"/>
-		<button type="button" class="btn btn-primary btn-lg" onclick="playGame()" id="p2" style="visibility:visible">Play</button>
-	</form>
-	<br />
-
-	<p><h2>Results:</h2></p>
-	<table border="1" style="border-collapse: collapse"><caption id="tableCaption"></caption>
-		<thead>
-			<tr>
-				<th>Starting Bet</th>
-				<th id="initialBet"> </th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Total Rolls Before Going Broke</td>
-				<td id="totalRolls"> </td>
-			</tr>
-			<tr>	
-				<td>Highest Amount Won</td>
-				<td id="highMoney"> </td>
-			</tr>
-			<tr>
-				<td>Roll Count at Highest Amount Won</td>
-				<td id="rollatHighest"> </td>
-			</tr>
-		</tbody>
-	</table>
-	<div>
-		<button id="playAgain" type="reset" class="btn btn-primary btn lg" onclick="resetTable()" style="visibility:hidden">Play again?</button>
+	<div id="bg" class="container-fluid">
+			
+		<div class="row">
+			<div class="col">
+				<header>
+					<h1>"Lucky Sevens!"</h1>
+				</header>
+			</div>	
+		</div>
+		<div class="row">
+			<div class="col"
+				<p id="resultsHeader"><h2>Enter a Starting Bet:</h2></p>
+			</div>
+		</div>
+			
+			<form  id="moneyform">
+				<div class="row">
+					<div class="col-12">											
+						<input type="number" class="form-control" id="betAmount" value="0"/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<button type="button" class="btn btn-primary btn-med" onclick="playGame()" id="p2" style="visibility:visible">Play</button>
+					
+					</div>
+				</div>
+			</form>
+		<div>
+			<p><h2>Results:</h2></p>
+			<table border="1" style="border-collapse: collapse"><caption id="tableCaption"></caption>
+				<thead>
+					<tr>
+						<th>Starting Bet</th>
+						<th id="initialBet"> </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Total Rolls Before Going Broke</td>
+						<td id="totalRolls"> </td>
+					</tr>
+					<tr>	
+						<td>Highest Amount Won</td>
+						<td id="highMoney"> </td>
+					</tr>
+					<tr>
+						<td>Roll Count at Highest Amount Won</td>
+						<td id="rollatHighest"> </td>
+					</tr>
+				</tbody>
+			</table>
+			<div>
+				<button id="playAgain" type="reset" class="btn btn-primary btn lg" onclick="resetTable()" style="visibility:hidden">Play again?</button>
 	</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
