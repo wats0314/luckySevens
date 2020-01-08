@@ -1,5 +1,11 @@
-function resetTable(){
-	document.getElementById("rollatHighest").innerHTML = "";
+/* 
+	Created by Mitch Watson
+	Date Created: 1/3/2020
+	Most recent revision: 1/8/2020 
+*/
+
+function resetTable(){									/* retunrns page to state before clicking "play" */
+	document.getElementById("rollatHighest").innerHTML = ""; 
 	document.getElementById("totalRolls").innerHTML = "";
 	document.getElementById("initialBet").innerHTML = "";
 	document.getElementById("highMoney").innerHTML = "";
@@ -8,17 +14,17 @@ function resetTable(){
 	document.getElementById("playAgain").style.visibility = "hidden";
 }
 
-function rollTwo(){ 
+function rollTwo(){ 									// simulates rolling two dice and returns their sum
 return Math.floor(Math.random() * 6 + 1) + Math.floor(Math.random() * 6 + 1); }
 
-function playGame() {
+function playGame() {                  					// primary function called when "play" is pressed
 
 	var startingBet = document.getElementById("betAmount").value;
 	var diceSound = new Audio("./sounds/dice.mp3");
-	var betMoney = parseInt(startingBet, 10);
-	var moneyLog = new Array();
+	var betMoney = parseInt(startingBet, 10);           // changes user input "startingBet" from a string to a number"
+	var moneyLog = new Array();							// creates array to store values returned by rollTwo()
 
-	function validate(){ 	
+	function validate(){ 								// alerts user that they cannot input a negative number, 0, or nothing to play the game
 	if (betMoney <= 0){
 	alert("Enter a value that is more than $0!")
 	}
@@ -26,9 +32,9 @@ function playGame() {
 	alert("You must enter a value to gamble with!")}
 	} 
 
-	validate();
+	validate();								
 		
-	for(var rollCount = 0; betMoney > 0; ++ rollCount){
+	for(var rollCount = 0; betMoney > 0; ++ rollCount){ // adds 4 if roll = 7, subtracts 1 if roll != 7. Logs roll sums to array
 	var diceSum = rollTwo();
 	moneyLog.push(betMoney);
 	console.log(betMoney);
@@ -36,21 +42,21 @@ function playGame() {
 		else{betMoney += 4}
 	}
 
-	function getMax(){return Math.max(...moneyLog)}
+	function getMax(){return Math.max(...moneyLog)}		// determines highest number found in the array
 
 	var highestMoney = getMax();
 		
 	for (i = 0; i < moneyLog.length; i++){
 		if (moneyLog[i] == highestMoney){var highRollIndex = i}
-		}
+		}												// finds where within array the highest value is located (index)
 
 	console.log("at roll " + highRollIndex + " you had the most money")		
 	console.log(Math.max(...moneyLog) + " was the most money you had")	
 	console.log("you made " + rollCount + " rolls before going broke")
 
-	if(startingBet == 0 || ""){ //prevents table from filling table without value or 0
+	if(startingBet == 0 || ""){ 						//prevents table from filling table with user input of 0, less than 0, or nothing
 		resetTable();
-		return;}
+		return;}										
 	if(startingBet < 0){
 		resetTable();
 		return;}
@@ -62,7 +68,7 @@ function playGame() {
 	document.getElementById("totalRolls").innerHTML = rollCount;
 	document.getElementById("rollatHighest").innerHTML = highRollIndex;
 	document.getElementById("playAgain").style.visibility = "visible";
-	}
+	}													// fills table with according values
 			
 
 
