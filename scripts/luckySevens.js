@@ -21,7 +21,7 @@ function playGame() {                  					// primary function called when "pla
 
 	var startingBet = document.getElementById("betAmount").value;
 	var diceSound = new Audio("./sounds/dice.mp3");
-	var betMoney = parseInt(startingBet, 10);           // changes user input "startingBet" from a string to a number"
+	var betMoney = parseFloat(startingBet);				// changes user input "startingBet" from a string to a number. Allows decimals to be input"
 	var moneyLog = new Array();							// creates array to store values returned by rollTwo()
 
 	function validate(){ 								// alerts user that they cannot input a negative number, 0, or nothing to play the game
@@ -68,7 +68,7 @@ function playGame() {                  					// primary function called when "pla
 	document.getElementById("totalRolls").innerHTML = rollCount;
 	document.getElementById("rollatHighest").innerHTML = highRollIndex;
 	document.getElementById("playAgain").style.visibility = "visible";
-	}													// fills table with according values
+	}													// fills table with according values, un-hides play-again button
 			
 
 
